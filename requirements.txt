@@ -1,6 +1,6 @@
 django
 Pillow
-celery
+celery==4.4.2
 flower
 braintree
 WeasyPrint
