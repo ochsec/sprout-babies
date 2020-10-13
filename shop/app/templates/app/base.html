@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,9 +9,7 @@
     </head>
     <body>
         <div id="header">
-            <a href="/" class="logo">Sprout Babies</a>
-        </div>
-        <div id="subheader">
+            <a href="/" class="logo"><img class="logo-image" src="{% static 'img/sprout_babies_logo_400.png' %}" alt=""></a>
             <div class="cart">
                 {% with total_items=cart|length %}
                     {% if total_items > 0 %}
@@ -26,6 +25,24 @@
             </div>
         </div>
         <div id="content">
+            <script>
+                function onCategorySelect() {
+                    var url = document.getElementById('category-dd').value;
+                    if (url === 'default') return;
+                    window.location.href = url;
+                }
+            </script>
+            <div class="category-dd-container" onchange="onCategorySelect()">
+                <select name="categories" id="category-dd">
+                    <option value="default">Shop by category</option>
+                    <option value="/products">All Products</option>
+                    {% for c in categories %}
+                        <option value="{{ c.get_absolute_url }}">
+                            {{ c.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
             {% block content %}
             {% endblock %}
         </div>

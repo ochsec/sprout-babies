@@ -1,0 +1,11 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div id="home-image-container">
+        <img src="{% static 'img/sprout-babies-home.jpg' %}">
+    </div>
+    <div id="home-description-container">
+        <h1><a href="/products">Click to enter site</a></h1>
+    </div>
+{% endblock %}
