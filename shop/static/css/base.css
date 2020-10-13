@@ -326,8 +326,11 @@ form div.field {
     border-radius:4px;
 }
 
-#home-image-container {
+#home-image-container, #home-description-container {
     text-align: center;
+    margin: auto;
+    margin-top: 25px;
+    color: greenyellow;
 }
 
 .category-dd-container {
@@ -339,6 +342,10 @@ form div.field {
 #category-dd {
     font-size:24px;
     color:#666;
+    background-color:#fff;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    width:25%;
     padding-left: 5px;
     padding-right: 10px;
     padding-bottom: 2px;

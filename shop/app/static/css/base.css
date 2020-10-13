@@ -12,11 +12,11 @@ h1, h2, h3, h4, h5 , h6 {
 
 a {
     text-decoration:none;
-    color:#5993bb;
+    color: #8fb766;
 }
 
 a:hover {
-    color:#77b6e2;
+    color: #66b766;
 }
 
 a.button, input[type="submit"] {
@@ -328,8 +328,11 @@ form div.field {
 
 #home-image-container, #home-description-container {
     text-align: center;
+    width: 60%;
     margin: auto;
     margin-top: 25px;
+    font-size: 24px;
+    color: #666;
 }
 
 .category-dd-container {
@@ -348,4 +351,21 @@ form div.field {
     padding-left: 5px;
     padding-right: 10px;
     padding-bottom: 2px;
+}
+
+.fa {
+    color: #66b766;
+}
+
+.cart-empty {
+    color: #fff;
+}
+
+.cart-total-items {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    right: 30px;
+    bottom: 16px;
+    color: #fff;
 }
