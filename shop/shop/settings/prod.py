@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DEV_SECRET_KEY') 
+SECRET_KEY = os.getenv('PROD_SECRET_KEY') 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -16,7 +16,7 @@ DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, "dev.sqlite3"),
+        'NAME': os.path.join(BASE_DIR, "db.sqlite3"),
     }
 }
 
