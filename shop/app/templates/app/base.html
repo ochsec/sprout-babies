@@ -5,27 +5,53 @@
     <head>
         <meta charset="utf-8" />
         <title>{% block title %}Sprout Babies{% endblock %}</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </head>
     <body>
         <div id="header">
             <a href="/" class="logo"><img class="logo-image" src="{% static 'img/sprout_babies_logo_400.png' %}" alt=""></a>
-            <div class="cart">
-                {% with total_items=cart|length %}
-                    {% if total_items > 0 %}
-                        <a href="{% url 'cart:cart_detail' %}">
-                            <i class="fa fa-shopping-cart fa-3x"></i>
-                            <span class="cart-total-items">{{ total_items }}</span>
-                        </a>
-                    {% else %}
-                        <i class="fa fa-shopping-cart fa-3x cart-empty"></i>
-                    {% endif %}
-                {% endwith %}
+            <input type="hidden" id="products" value="{{ product_search }}">
+            <div class="top-widgets">
+                <input type="text" id="search" class="search-bar" value="" placeholder="Search">
+                <div class="cart">
+                    {% with total_items=cart|length %}
+                        {% if total_items > 0 %}
+                            <a href="{% url 'cart:cart_detail' %}">
+                                <i class="fa fa-shopping-cart fa-3x"></i>
+                                <span class="cart-total-items">{{ total_items }}</span>
+                            </a>
+                        {% else %}
+                            <i class="fa fa-shopping-cart fa-3x cart-empty"></i>
+                        {% endif %}
+                    {% endwith %}
+                </div>
             </div>
         </div>
         <div id="content">
             <script>
+                var products = [];
+                var searchBox;
+                
+                document.addEventListener('DOMContentLoaded', function (event) {
+                    var productsStr = document.getElementById('products').value;
+                    products = JSON.parse(productsStr);
+                    searchBox = document.getElementById('search');
+
+                    // Autocomplete
+                    $('#search').autocomplete({
+                        source: products.map(p => p.name)
+                    })
+                });
+
+                $('#search').on('autocompleteselect', function (event, ui) {
+                    var product = products.filter(p => p.name.toLowerCase().includes(ui.item.value.toLowerCase()))[0];
+                    window.location.href = product.url;
+                });
+
                 function onCategorySelect() {
                     var url = document.getElementById('category-dd').value;
                     if (url === 'default') return;
