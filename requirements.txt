@@ -4,3 +4,5 @@ celery==4.4.2
 flower
 braintree
 WeasyPrint
+python-dotenv
+uwsgi==2.0.18

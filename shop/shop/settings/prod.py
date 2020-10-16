@@ -8,7 +8,9 @@ load_dotenv()
 SECRET_KEY = os.getenv('PROD_SECRET_KEY') 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+ALLOWED_HOSTS = ['*']
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
