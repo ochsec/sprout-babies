@@ -39,7 +39,7 @@ class Cart(object):
         """
         product_id = str(product.id)
         if product_id in self.cart:
-            del self.cart[product.id]
+            del self.cart[str(product.id)]
             self.save()
     
     def __iter__(self):
