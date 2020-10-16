@@ -25,7 +25,9 @@
                                 <span class="cart-total-items">{{ total_items }}</span>
                             </a>
                         {% else %}
-                            <i class="fa fa-shopping-cart fa-3x cart-empty"></i>
+                        <a href="{% url 'cart:cart_detail' %}">
+                            <i class="fa fa-shopping-cart fa-3x"></i>
+                        </a>
                         {% endif %}
                     {% endwith %}
                 </div>
