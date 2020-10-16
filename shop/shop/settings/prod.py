@@ -1,11 +1,12 @@
 import os
 from .base import *
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('PROD_SECRET_KEY') 
+# SECRET_KEY = os.getenv('PROD_SECRET_KEY') 
+SECRET_KEY = 'Gj%#4%TJAw3FNY&?!@9Uz4?`McU*<aGxNfjtvi*@vC`VuJ%!kD'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
