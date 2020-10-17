@@ -48,14 +48,15 @@ def product_detail(request, id, slug):
     product_search = [{'name': p.name, 'url': p.get_absolute_url()} for p in products]
     images = Image.objects.filter(product=product.id)
 
-    for i in images:
-        if i.primary:
-            product.image_url = str(i.url)
+    # for i in images:
+    #     if i.primary:
+    #         product.image_url = str(i.url)
 
     return render(request,
         'app/product/detail.html',
         {'product': product,
         'categories': categories,
+        'images': images,
         'product_search': json.dumps(product_search),
         'cart_product_form': cart_product_form})
 

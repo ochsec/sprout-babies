@@ -6,8 +6,23 @@
 {% endblock %}
 
 {% block content %}
+    <div class="slideshow-container">
+        {% for image in images %}
+            <div class="slides fade">
+                <img src="{{ MEDIA_URL }}/media/{{ image.url }}" alt="{{ image.alt }}">
+            </div>
+        {% endfor %}
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div class="slideshow-container" style="text-align: center">
+        {% for image in images %}
+            <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+        {% endfor %}
+    </div>
     <div class="product-detail">
-        <img src="{% if product.image_url %}{{ MEDIA_URL }}/media/{{ product.image_url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+        <!-- <img src="{% if product.image_url %}{{ MEDIA_URL }}/media/{{ product.image_url }}{% else %}{% static 'img/no_image.png' %}{% endif %}"> -->
         <h1>{{ product.name }}</h1>
         <h2>
             <a href="{{ product.category.get_absolute_url }}">
@@ -22,4 +37,32 @@
         </form>
         {{ product.description|linebreaks }}
     </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName('slides');
+            var dots = document.getElementsByClassName('dot');
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.legnth; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
 {% endblock %}
