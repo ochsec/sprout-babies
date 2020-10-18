@@ -1,13 +1,13 @@
 * { box-sizing: border-box }
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow-image-container, .slideshow-nav-container {
     max-width: 600px;
     position: relative;
     margin: aut;
 }
 
-.slideshow-container img {
+.slideshow-image-container img {
     max-width: 600px;
 }
 

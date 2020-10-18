@@ -6,37 +6,41 @@
 {% endblock %}
 
 {% block content %}
-    <div class="slideshow-container">
-        {% for image in images %}
-            <div class="slides fade">
-                <img src="{{ MEDIA_URL }}/media/{{ image.url }}" alt="{{ image.alt }}">
+    <div class="detail-container">
+        <div class="slideshow-container">
+            <div class="slideshow-image-container">
+                {% for image in images %}
+                    <div class="slides fade">
+                        <img src="{{ MEDIA_URL }}/media/{{ image.url }}" alt="{{ image.alt }}">
+                    </div>
+                {% endfor %}
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-        {% endfor %}
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="slideshow-nav-container" style="text-align: center">
+                {% for image in images %}
+                    <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="product-detail">
+            <!-- <img src="{% if product.image_url %}{{ MEDIA_URL }}/media/{{ product.image_url }}{% else %}{% static 'img/no_image.png' %}{% endif %}"> -->
+            <h1>{{ product.name }}</h1>
+            <h2>
+                <a href="{{ product.category.get_absolute_url }}">
+                    {{ product.category }}
+                </a>
+            </h2>
+            <p class="price">${{ product.price }}</p>
+            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                {{ cart_product_form }}
+                {% csrf_token %}
+                <input id="add-to-cart" type="submit" value="Add to cart">
+            </form>
+            {{ product.description|linebreaks }}
+        </div>
     </div>
-    <br>
-    <div class="slideshow-container" style="text-align: center">
-        {% for image in images %}
-            <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
-        {% endfor %}
-    </div>
-    <div class="product-detail">
-        <!-- <img src="{% if product.image_url %}{{ MEDIA_URL }}/media/{{ product.image_url }}{% else %}{% static 'img/no_image.png' %}{% endif %}"> -->
-        <h1>{{ product.name }}</h1>
-        <h2>
-            <a href="{{ product.category.get_absolute_url }}">
-                {{ product.category }}
-            </a>
-        </h2>
-        <p class="price">${{ product.price }}</p>
-        <form action="{% url 'cart:cart_add' product.id %}" method="post">
-            {{ cart_product_form }}
-            {% csrf_token %}
-            <input type="submit" value="Add to cart">
-        </form>
-        {{ product.description|linebreaks }}
-    </div>
+
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);

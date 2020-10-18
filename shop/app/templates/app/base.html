@@ -16,22 +16,20 @@
         <div id="header">
             <a href="/" class="logo"><img class="logo-image" src="{% static 'img/sprout_babies_logo_400.png' %}" alt=""></a>
             <input type="hidden" id="products" value="{{ product_search }}">
-            <div class="top-widgets">
-                <input type="text" id="search" class="search-bar" value="" placeholder="Search">
-                <div class="cart">
-                    {% with total_items=cart|length %}
-                        {% if total_items > 0 %}
-                            <a href="{% url 'cart:cart_detail' %}">
-                                <i class="fa fa-shopping-cart fa-3x"></i>
-                                <span class="cart-total-items">{{ total_items }}</span>
-                            </a>
-                        {% else %}
+            <input type="text" id="search" class="search-bar" value="" placeholder="Search">
+            <div class="cart">
+                {% with total_items=cart|length %}
+                    {% if total_items > 0 %}
                         <a href="{% url 'cart:cart_detail' %}">
                             <i class="fa fa-shopping-cart fa-3x"></i>
+                            <span class="cart-total-items">{{ total_items }}</span>
                         </a>
-                        {% endif %}
-                    {% endwith %}
-                </div>
+                    {% else %}
+                    <a href="{% url 'cart:cart_detail' %}">
+                        <i class="fa fa-shopping-cart fa-3x"></i>
+                    </a>
+                    {% endif %}
+                {% endwith %}
             </div>
         </div>
         <div id="content">
