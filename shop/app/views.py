@@ -48,10 +48,6 @@ def product_detail(request, id, slug):
     product_search = [{'name': p.name, 'url': p.get_absolute_url()} for p in products]
     images = Image.objects.filter(product=product.id)
 
-    # for i in images:
-    #     if i.primary:
-    #         product.image_url = str(i.url)
-
     return render(request,
         'app/product/detail.html',
         {'product': product,

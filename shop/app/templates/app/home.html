@@ -2,11 +2,15 @@
 {% load static %}
 
 {% block content %}
-    <div id="home-image-container">
-        <img src="{% static 'img/sprout-babies-home.jpg' %}">
-    </div>
-    <div id="home-description-container">
-        <h1><a href="/products">Click to enter site</a></h1>
-        <p>Id nibh tortor id aliquet lectus proin. Duis convallis convallis tellus id interdum. Eu feugiat pretium nibh ipsum consequat nisl vel. Ipsum nunc aliquet bibendum enim facilisis gravida. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod. Sit amet massa vitae tortor condimentum lacinia quis vel eros. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Odio aenean sed adipiscing diam donec adipiscing tristique. Consectetur libero id faucibus nisl tincidunt eget nullam. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. Neque sodales ut etiam sit amet. Interdum posuere lorem ipsum dolor sit. Orci nulla pellentesque dignissim enim sit amet venenatis. Risus nec feugiat in fermentum posuere urna. Orci ac auctor augue mauris augue neque gravida in.</p>
+    <div class="home-container">
+        <div class="background-container" style="background-image: url({% static 'img/nahil-naseer-unsplash.jpg' %})">
+            <div id="home-image-container">
+                <img src="{% static 'img/sprout-babies-home.jpg' %}">
+            </div>
+        </div>
+        <div id="home-description-container">
+            <h1><a href="/products">Click to enter site</a></h1>
+            <p>Id nibh tortor id aliquet lectus proin. Duis convallis convallis tellus id interdum. Eu feugiat pretium nibh ipsum consequat nisl vel. Ipsum nunc aliquet bibendum enim facilisis gravida. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod. Sit amet massa vitae tortor condimentum lacinia quis vel eros. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Odio aenean sed adipiscing diam donec adipiscing tristique. Consectetur libero id faucibus nisl tincidunt eget nullam. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. Neque sodales ut etiam sit amet. Interdum posuere lorem ipsum dolor sit. Orci nulla pellentesque dignissim enim sit amet venenatis. Risus nec feugiat in fermentum posuere urna. Orci ac auctor augue mauris augue neque gravida in.</p>
+        </div>
     </div>
 {% endblock %}

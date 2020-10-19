@@ -14,9 +14,12 @@
     </head>
     <body>
         <div id="header">
-            <a href="/" class="logo"><img class="logo-image" src="{% static 'img/sprout_babies_logo_400.png' %}" alt=""></a>
+            <a href="/" class="logo">Sprout Babies</a>
             <input type="hidden" id="products" value="{{ product_search }}">
-            <input type="text" id="search" class="search-bar" value="" placeholder="Search">
+            <div class="search-container">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" id="search" class="search-bar" value="" placeholder="Search">
+            </div>
             <div class="cart">
                 {% with total_items=cart|length %}
                     {% if total_items > 0 %}

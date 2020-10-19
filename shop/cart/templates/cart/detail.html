@@ -10,7 +10,7 @@
     <table class="cart">
         <thead>
             <tr>
-                <th>Image</th>
+                <th></th>
                 <th>Product</th>
                 <th>Quantity</th>
                 <th>Remove</th>
@@ -24,7 +24,7 @@
                     <tr>
                         <td>
                             <a href="{{ product.get_absolute_url }}">
-                                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+                                <img src="{% if item.image_url %}{{ MEDIA_URL }}/media/{{ item.image_url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
                             </a>
                         </td>
                         <td>{{ product.name }}</td>
@@ -48,8 +48,8 @@
                 {% endwith %}
             {% endfor %}
             <tr class="total">
-                <td>Total</td>
                 <td colspan="4"></td>
+                <td>Total</td>
                 <td class="num">${{ cart.get_total_price }}</td>
             </tr>
         </tbody>
