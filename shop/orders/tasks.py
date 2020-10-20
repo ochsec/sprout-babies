@@ -13,7 +13,7 @@ def order_created(order_id):
     message = f"Dear {order.first_name},\n\n" \
         f"You have successfully placed an order." \
         f"Your order ID is {order.id}."
-    mail_sent = send_mail(subject, message, 'admin@sproutbabies.com', [order.email])
+    mail_sent = send_mail(subject, message, 'sproutbabies2@gmail.com', [order.email])
 
     return mail_sent
 

@@ -19,7 +19,7 @@ def payment_completed(order_id):
     find attached the receipt for your recent purchase."
     email = EmailMessage(subject,
         message,
-        "admin@sproutbabies.com",
+        "sproutbabies2@gmail.com",
         [order.email])
 
     # generate PDF
