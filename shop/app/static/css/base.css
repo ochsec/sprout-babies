@@ -395,13 +395,10 @@ form div.field {
     width: 100%;
 }
 
-.background-container {
-    height: 1000px;
-}
-
 #home-image-container, #home-description-container {
     text-align: center;
-    width: 60%;
+    width: 100%;
+    max-width: 2048px;
     margin: auto;
     margin-top: 25px;
     font-size: 24px;
@@ -409,9 +406,7 @@ form div.field {
 }
 
 #home-image-container img {
-    height: 940px;
-    margin-top: 30px;
-    /* border: 3px solid white; */
+    width: 100%;
 }
 
 .category-dd-container {
