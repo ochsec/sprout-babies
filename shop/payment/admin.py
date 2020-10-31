@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import StateTax
 
-# Register your models here.
+@admin.register(StateTax)
+class StateTaxAdmin(admin.ModelAdmin):
+    list_display = ['name', 'abbr', 'tax_rate']
+    list_filter = ['name', 'abbr']
+    list_editable = ['tax_rate']
+
