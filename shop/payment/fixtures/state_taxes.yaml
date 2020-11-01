@@ -1,0 +1,306 @@
+- model: payment.StateTax
+  pk: 1
+  fields:
+    name: Alabama
+    abbr: AL
+    tax_rate: 4.00
+- model: payment.StateTax
+  pk: 2
+  fields:
+    name: Alaska
+    abbr: AK
+    tax_rate: 0.00
+- model: payment.StateTax
+  pk: 3
+  fields:
+    name: Arizona
+    abbr: AZ
+    tax_rate: 5.60
+- model: payment.StateTax
+  pk: 4
+  fields:
+    name: Arkansas
+    abbr: AR
+    tax_rate: 6.50
+- model: payment.StateTax
+  pk: 5
+  fields:
+    name: California
+    abbr: CA
+    tax_rate: 7.25
+- model: payment.StateTax
+  pk: 6
+  fields:
+    name: Colorado
+    abbr: CO
+    tax_rate: 2.90
+- model: payment.StateTax
+  pk: 7
+  fields:
+    name: Connecticut
+    abbr: CT
+    tax_rate: 6.35
+- model: payment.StateTax
+  pk: 8
+  fields:
+    name: District of Columbia
+    abbr: DC
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 9
+  fields:
+    name: Delaware
+    abbr: DE
+    tax_rate: 0.00
+- model: payment.StateTax
+  pk: 10
+  fields:
+    name: Florida
+    abbr: FL
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 11
+  fields:
+    name: Georgia
+    abbr: GA
+    tax_rate: 4.00
+- model: payment.StateTax
+  pk: 12
+  fields:
+    name: Hawaii
+    abbr: HI
+    tax_rate: 4.00
+- model: payment.StateTax
+  pk: 13
+  fields:
+    name: Idaho
+    abbr: ID
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 14
+  fields:
+    name: Illinois
+    abbr: IL
+    tax_rate: 6.25
+- model: payment.StateTax
+  pk: 15
+  fields:
+    name: Indiana
+    abbr: IN
+    tax_rate: 7.00
+- model: payment.StateTax
+  pk: 16
+  fields:
+    name: Iowa
+    abbr: IA
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 17
+  fields:
+    name: Kansas
+    abbr: KS
+    tax_rate: 6.50
+- model: payment.StateTax
+  pk: 18
+  fields:
+    name: Kentucky
+    abbr: KY
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 19
+  fields:
+    name: Louisiana
+    abbr: LA
+    tax_rate: 4.45
+- model: payment.StateTax
+  pk: 20
+  fields:
+    name: Maine
+    abbr: ME
+    tax_rate: 5.50
+- model: payment.StateTax
+  pk: 21
+  fields:
+    name: Massachusetts
+    abbr: MA
+    tax_rate: 6.25
+- model: payment.StateTax
+  pk: 22
+  fields:
+    name: Maryland
+    abbr: MD
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 23
+  fields:
+    name: Michigan
+    abbr: MI
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 24
+  fields:
+    name: Minnesota
+    abbr: MN
+    tax_rate: 6.875
+- model: payment.StateTax
+  pk: 25
+  fields:
+    name: Mississippi
+    abbr: MS
+    tax_rate: 7.00
+- model: payment.StateTax
+  pk: 26
+  fields:
+    name: Missouri
+    abbr: MO
+    tax_rate: 4.225
+- model: payment.StateTax
+  pk: 27
+  fields:
+    name: Montana
+    abbr: MT
+    tax_rate: 0.00
+- model: payment.StateTax
+  pk: 28
+  fields:
+    name: North Carolina
+    abbr: NC
+    tax_rate: 4.75
+- model: payment.StateTax
+  pk: 29
+  fields:
+    name: North Dakota
+    abbr: ND
+    tax_rate: 5.00
+- model: payment.StateTax
+  pk: 30
+  fields:
+    name: New Hampshire
+    abbr: NH
+    tax_rate: 0.00
+- model: payment.StateTax
+  pk: 31
+  fields:
+    name: New Jersey
+    abbr: NJ
+    tax_rate: 6.625
+- model: payment.StateTax
+  pk: 32
+  fields:
+    name: New Mexico
+    abbr: NM
+    tax_rate: 5.125
+- model: payment.StateTax
+  pk: 33
+  fields:
+    name: New York
+    abbr: NY
+    tax_rate: 4.00
+- model: payment.StateTax
+  pk: 34
+  fields:
+    name: Nebraska
+    abbr: NE
+    tax_rate: 5.50
+- model: payment.StateTax
+  pk: 35
+  fields:
+    name: Nevada
+    abbr: NV
+    tax_rate: 6.85
+- model: payment.StateTax
+  pk: 36
+  fields:
+    name: Ohio
+    abbr: OH
+    tax_rate: 5.75
+- model: payment.StateTax
+  pk: 37
+  fields:
+    name: Oklahoma
+    abbr: OK
+    tax_rate: 4.50
+- model: payment.StateTax
+  pk: 38
+  fields:
+    name: Oregon
+    abbr: OR
+    tax_rate: 0.00
+- model: payment.StateTax
+  pk: 39
+  fields:
+    name: Pennsylvania
+    abbr: PA
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 40
+  fields:
+    name: Rhode Island
+    abbr: RI
+    tax_rate: 7.00
+- model: payment.StateTax
+  pk: 41
+  fields:
+    name: South Carolina
+    abbr: SC
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 42
+  fields:
+    name: South Dakota
+    abbr: SD
+    tax_rate: 4.50
+- model: payment.StateTax
+  pk: 43
+  fields:
+    name: Tennessee
+    abbr: TN
+    tax_rate: 7.00
+- model: payment.StateTax
+  pk: 44
+  fields:
+    name: Texas
+    abbr: TX
+    tax_rate: 6.25
+- model: payment.StateTax
+  pk: 45
+  fields:
+    name: Utah
+    abbr: UT
+    tax_rate: 6.10
+- model: payment.StateTax
+  pk: 46
+  fields:
+    name: Virginia
+    abbr: VA
+    tax_rate: 5.30
+- model: payment.StateTax
+  pk: 47
+  fields:
+    name: Vermont
+    abbr: VT
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 48
+  fields:
+    name: West Virginia
+    abbr: WV
+    tax_rate: 6.00
+- model: payment.StateTax
+  pk: 49
+  fields:
+    name: Washington
+    abbr: WA
+    tax_rate: 6.50
+- model: payment.StateTax
+  pk: 50
+  fields:
+    name: Wisconsin
+    abbr: WI
+    tax_rate: 5.00
+- model: payment.StateTax
+  pk: 51
+  fields:
+    name: Wyoming
+    abbr: WY
+    tax_rate: 4.00

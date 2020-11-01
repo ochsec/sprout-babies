@@ -6,3 +6,4 @@ braintree
 WeasyPrint
 python-dotenv
 uwsgi==2.0.18
+PyYAML==5.3.1
