@@ -40,6 +40,13 @@
             </td>
         </tr>
         <tr>
+            <th>Billing Address</th>
+            <td>
+                {{ order.billing_address }}
+                {{ order.billing_postal_code }} {{ order.billing_city }}
+            </td>
+        </tr>
+        <tr>
             <th>Total amount</th>
             <td>${{ order.get_total_cost }}</td>
         </tr>
