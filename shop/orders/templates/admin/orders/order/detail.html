@@ -33,17 +33,10 @@
             <td><a href="mailto:{{ order.email }}">{{ order.email }}</a></td>
         </tr>
         <tr>
-            <th>Address</th>
+            <th>Shipping Address</th>
             <td>
                 {{ order.address }}
                 {{ order.postal_code }} {{ order.city }}
-            </td>
-        </tr>
-        <tr>
-            <th>Billing Address</th>
-            <td>
-                {{ order.billing_address }}
-                {{ order.billing_postal_code }} {{ order.billing_city }}
             </td>
         </tr>
         <tr>

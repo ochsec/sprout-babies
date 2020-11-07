@@ -1,6 +1,6 @@
 from django.db import models
 from app.models import Product
-from payment.models import StateTax
+# from payment.models import StateTax
 
 class Order(models.Model):
     first_name = models.CharField(max_length=50)
@@ -9,9 +9,9 @@ class Order(models.Model):
     address = models.CharField(max_length=250)
     postal_code = models.CharField(max_length=20)
     city = models.CharField(max_length=100)
-    billing_address = models.CharField(max_length=250)
-    billing_postal_code = models.CharField(max_length=20)
-    billing_city = models.CharField(max_length=100)
+    # billing_address = models.CharField(max_length=250)
+    # billing_postal_code = models.CharField(max_length=20)
+    # billing_city = models.CharField(max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
