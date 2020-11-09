@@ -37,6 +37,13 @@ a.button.light {
     background:#ededed;
 }
 
+button.button, input[type="submit"] {
+    color:#fff;
+    border-radius:4px;
+    padding:10px 10px;
+    border:0;
+}
+
 .text-left {
     text-align:left;
 }
@@ -77,12 +84,12 @@ table.cart {
 }
 
 table.cart img {
-    width:180px;
+    width:100px;
 }
 
 tbody td.num {
     text-align:left;
-    font-size: 28px;
+    font-size: 24px;
     color: #333;
 }
 
@@ -244,7 +251,7 @@ ul.errorlist {
     width: 100%;
     display: grid;
     grid-gap: 25px 50px;
-    grid-template-columns: 700px auto;
+    margin: auto;
 }
 
 .product-detail {
@@ -384,12 +391,11 @@ ul.errorlist {
 
 /* braintree hosted fields */
 form div.field {
-    font-size:13px;
     color:#666;
     width:300px;
-    height:22px;
+    height: 40px;
     margin-bottom:10px;
-    padding:6px 12px;
+    padding: 6px 12px;
     border:0;
     background:#efefef;
     color:#666;
@@ -428,7 +434,8 @@ form div.field {
     background-color:#fff;
     border: 1px solid #dedede;
     border-radius: 5px;
-    width:25%;
+    width:35%;
+    max-width: 400px;
     padding: 8px 8px 8px 8px;
 }
 

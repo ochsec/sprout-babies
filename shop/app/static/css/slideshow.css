@@ -2,13 +2,14 @@
 
 /* Slideshow container */
 .slideshow-image-container, .slideshow-nav-container {
-    max-width: 600px;
+    width: 50%;
+    max-width: 800px;
     position: relative;
-    margin: aut;
+    margin: auto;
 }
 
 .slideshow-image-container img {
-    max-width: 600px;
+    width: 100%;
 }
 
 /* Hide the images by default */

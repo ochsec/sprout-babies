@@ -13,7 +13,7 @@
                 <th></th>
                 <th>Product</th>
                 <th>Quantity</th>
-                <th>Remove</th>
+                <th></th>
                 <th>Unit Price</th>
                 <th>Price</th>
             </tr>
@@ -38,7 +38,7 @@
                         </td>
                         <td>
                             <form action="{% url 'cart:cart_remove' product.id %}" method="post">
-                                <input type="submit" value="Remove">
+                                <button class="button" type="submit"><i class="fa fa-trash fa-3x"></i></button>
                                 {% csrf_token %}
                             </form>
                         </td>
