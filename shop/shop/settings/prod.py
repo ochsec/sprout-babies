@@ -5,7 +5,6 @@ from .base import *
 # load_dotenv()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.getenv('PROD_SECRET_KEY') 
 SECRET_KEY = 'Gj%#4%TJAw3FNY&?!@9Uz4?`McU*<aGxNfjtvi*@vC`VuJ%!kD'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -19,7 +18,7 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sprout-dev',
+        'NAME': 'sprout',
         'USER': 'doadmin',
         'PASSWORD': 'alt98m9u4wquaeyx',
         'HOST': 'db-postgresql-sfo2-98569-do-user-1287700-0.b.db.ondigitalocean.com',
