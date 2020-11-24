@@ -48,8 +48,12 @@
                 {% endwith %}
             {% endfor %}
             <tr class="total">
-                <td colspan="4"></td>
-                <td>Subtotal</td>
+                <td colspan="4">
+                    <span style="font-size: 0.9rem; font-style: italic;">
+                        Tax Notice: Unless exempt, buyer shall be responsible for payment of any sales or use tax with respect to the transactions herein.
+                    </span>
+                </td>
+                <td>Total</td>
                 <td class="num">${{ cart.get_total_price }}</td>
             </tr>
         </tbody>
